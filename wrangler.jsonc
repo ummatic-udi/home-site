@@ -1,0 +1,12 @@
+{
+  // Cloudflare Worker with static assets. No Worker script: Cloudflare serves ./public as is.
+  // The account id and API token are NOT stored here. Set them in the shell at deploy time.
+  "name": "ummatic-digital-home",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./public"
+  },
+  "routes": [
+    { "pattern": "ummatic.digital", "custom_domain": true }
+  ]
+}
