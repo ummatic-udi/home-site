@@ -6,6 +6,9 @@
   "assets": {
     "directory": "./public"
   },
+  // Serve only on the custom domain: no workers.dev or preview URLs.
+  "workers_dev": false,
+  "preview_urls": false,
   "routes": [
     { "pattern": "ummatic.digital", "custom_domain": true }
   ]

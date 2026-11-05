@@ -48,8 +48,6 @@
   --focus: #1F6F64;
   --card: #FFFFFF;
   --card-line: #6B8C86;
-  --frame: #FFFFFF;
-  --frame-line: #6B8C86;
   --header-bg: #FFFFFF;
   --header-line: #D3E0DD;
   --chip-bg: #EEF3F2;
@@ -70,8 +68,6 @@
     --focus: #7FC4B8;
     --card: #0F2B28;
     --card-line: #4F8A80;
-    --frame: #FFFFFF;
-    --frame-line: #7FC4B8;
     --header-bg: #0F2B28;
     --header-line: #2A524C;
     --chip-bg: #1B433E;
@@ -297,17 +293,10 @@ a:hover { text-decoration-thickness: 2px; }
 .diagram:first-of-type { margin-top: 0; }
 .diagram h3 { margin-bottom: 8px; }
 .caption { max-width: 62ch; margin-bottom: 20px; color: var(--muted); }
-.frame {
-  overflow-x: auto;
-  padding: 12px;
-  background: var(--frame);
-  border: 1px solid var(--frame-line);
-  border-radius: var(--radius);
-  -webkit-overflow-scrolling: touch;
-}
-.frame img { display: block; width: 100%; min-width: 860px; max-width: none; height: auto; }
-.hint { margin: 8px 0 0; font-size: 0.875rem; color: var(--muted); }
-.diagram details { margin-top: 12px; }
+/* Theme-aware SVGs: transparent, sized to the column, no frame or panning. */
+.figure { display: block; }
+.figure img { display: block; width: 100%; height: auto; }
+.diagram details { margin-top: 16px; }
 .diagram summary {
   display: flex;
   align-items: center;
@@ -337,8 +326,6 @@ a:hover { text-decoration-thickness: 2px; }
 .diagram details > p { max-width: 62ch; color: var(--muted); }
 .textalt { max-width: 62ch; margin: 0 0 8px; padding-left: 1.5em; }
 .textalt li { margin-bottom: 8px; }
-.open-full { margin: 0; }
-.open-full a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
 
 /* Coming-soon cards */
 .cards { display: grid; gap: 24px; align-items: start; }
@@ -400,9 +387,6 @@ a:hover { text-decoration-thickness: 2px; }
   .hero-actions .btn-primary { width: auto; }
   .section { padding-block: 80px; }
   .stats { grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .frame { padding: 20px; }
-  .frame img { min-width: 0; }
-  .hint { display: none; }
   .card { padding: 32px; }
   .members > div { display: grid; grid-template-columns: 11rem 1fr; gap: 16px; }
   .members dt { margin: 0; }
